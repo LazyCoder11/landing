@@ -20,10 +20,10 @@ const Bento = () => {
         </div>
 
         {/* Bento Grid */}
-        <div className="px-20">
+        <div className="px-5 md:px-20">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Card 1 */}
-            <div className="h-64 justify-end bg-gradient-to-br from-brand-dark/10 to-brand-light/10 rounded-xl p-6 flex flex-col space-y-4 hover:shadow-[0_4px_30px_-3px_rgba(242,97,63,0.3)] border border-brand-yellow/20 duration-500 backdrop-blur-xl bg-opacity-10">
+            <div className="md:min-h-64 justify-end bg-gradient-to-br from-brand-dark/10 to-brand-light/10 rounded-xl p-6 flex flex-col space-y-4 hover:shadow-[0_4px_30px_-3px_rgba(242,97,63,0.3)] border border-brand-yellow/20 duration-500 backdrop-blur-xl bg-opacity-10">
               <p className="text-lg font-medium">
                 Empower Your Stoxi&apos;s Advanced
               </p>
@@ -34,7 +34,7 @@ const Bento = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="h-64 justify-end bg-gradient-to-br from-brand-dark/10 to-brand-light/10 rounded-xl p-6 flex flex-col space-y-4 hover:shadow-[0_4px_30px_-3px_rgba(242,97,63,0.3)] border border-brand-yellow/20 duration-500 backdrop-blur-xl bg-opacity-10">
+            <div className="md:min-h-64 justify-end bg-gradient-to-br from-brand-dark/10 to-brand-light/10 rounded-xl p-6 flex flex-col space-y-4 hover:shadow-[0_4px_30px_-3px_rgba(242,97,63,0.3)] border border-brand-yellow/20 duration-500 backdrop-blur-xl bg-opacity-10">
               <div className="flex items-center space-x-3">
                 <div className="w-6 h-6 rounded-full bg-brand-yellow"></div>
                 <h3 className="text-lg font-semibold">Empower</h3>
@@ -46,7 +46,7 @@ const Bento = () => {
             </div>
 
             {/* Card 3 */}
-            <div className="h-64 justify-end bg-gradient-to-br from-brand-dark/10 to-brand-light/10 rounded-xl p-6 flex flex-col space-y-4 hover:shadow-[0_4px_30px_-3px_rgba(242,97,63,0.3)] border border-brand-yellow/20 duration-500 backdrop-blur-xl bg-opacity-30">
+            <div className="md:min-h-64 justify-end bg-gradient-to-br from-brand-dark/10 to-brand-light/10 rounded-xl p-6 flex flex-col space-y-4 hover:shadow-[0_4px_30px_-3px_rgba(242,97,63,0.3)] border border-brand-yellow/20 duration-500 backdrop-blur-xl bg-opacity-30">
               <h3 className="text-lg font-semibold">
                 Your Stoxi Queries Answered
               </h3>
@@ -56,9 +56,9 @@ const Bento = () => {
               </p>
             </div>
           </div>
-          <div className="flex mt-6 space-x-6">
+          <div className="flex flex-col md:flex-row mt-6 md:space-x-6 md:space-y-0 space-y-6">
             {/* Card 4 - Gradient Animation */}
-            <div className="h-64 justify-end rounded-xl p-6 flex flex-col space-y-4 hover:shadow-[0_4px_30px_-3px_rgba(255,255,255,0.3)] border border-brand-yellow/20 duration-500 backdrop-blur-xl bg-opacity-10 bg-gradient-to-tr from-brand-yellow/20 to-brand-dark/20">
+            <div className="w-full md:w-1/2 md:min-h-64 justify-end rounded-xl p-6 flex flex-col space-y-4 shadow-xl shadow-brand-yellow/15 hover:shadow-[0_4px_30px_-3px_rgba(255,255,255,0.3)] border border-brand-yellow/20 duration-500 backdrop-blur-xl bg-opacity-10 bg-gradient-to-tr from-brand-yellow/20 to-brand-dark/20">
               <div className="flex items-center justify-between space-x-3">
                 <h3 className="text-lg font-semibold">
                   Transform Your Finances with Stoxi&apos;s
@@ -66,23 +66,24 @@ const Bento = () => {
                 <div className="w-6 h-6 rounded-full bg-brand-yellow"></div>
               </div>
               <p className="text-white">
-                If you can&apos;t find the answer you&apos;re looking for, our support
-                team is always ready to assist with any additional questions.If
-                you can&apos;t find the answer you&apos;re looking for, our support team
-                is always ready to assist with any additional questions.
+                If you can&apos;t find the answer you&apos;re looking for, our
+                support team is always ready to assist with any additional
+                questions.If you can&apos;t find the answer you&apos;re looking
+                for, our support team is always ready to assist with any
+                additional questions.
               </p>
             </div>
 
             {/* Card 5 - Gradient Animation */}
-            <div className="h-64 justify-end rounded-xl p-6 flex flex-col space-y-4 shadow-3xl shadow-brand-light hover:shadow-[0_4px_30px_-3px_rgba(255,255,255,0.3)] border border-brand-yellow/20 duration-500 backdrop-blur-md bg-opacity-10 bg-gradient-to-tr from-brand-yellow/20 to-brand-dark/20">
+            <div className="w-full md:w-1/2 md:min-h-64 justify-end rounded-xl p-6 flex flex-col space-y-4 shadow-xl shadow-brand-yellow/15 hover:shadow-[0_4px_30px_-3px_rgba(255,255,255,0.3)] border border-brand-yellow/20 duration-500 backdrop-blur-md bg-opacity-10 bg-gradient-to-tr from-brand-yellow/20 to-brand-dark/20">
               <h3 className="text-lg font-semibold">
                 Discover Advanced Strategies with Stoxi
               </h3>
               <p className="text-white">
                 Subscription section in the settings of the app. From there, you
-                can manage or cancel your plan at any time. If you can&apos;t find
-                the answer you&apos;re looking for, our support team is always ready
-                to assist with any additional questions.
+                can manage or cancel your plan at any time. If you can&apos;t
+                find the answer you&apos;re looking for, our support team is
+                always ready to assist with any additional questions.
               </p>
             </div>
           </div>

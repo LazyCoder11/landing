@@ -43,7 +43,7 @@ export function MarqueeLogo() {
           Already chose by the leaders
         </h2>
       </div>
-      <div className="flex h-full max-w-7xl mx-auto overflow-hidden backdrop-blur-2xl p-3">
+      <div className="flex h-full w-full md:max-w-7xl mx-auto overflow-hidden backdrop-blur-2xl p-3">
         <Marquee className="[--duration:20s]">
           {firstRow.map((review, index) => (
             <ReviewCard key={index} {...review} />

@@ -4,7 +4,7 @@ import React from "react";
 
 const CTA = () => {
   return (
-    <div className="flex flex-col items-center h-[55vh] justify-center bg-brand-dark mx-40 text-white py-12 px-6 md:px-12 rounded-3xl shadow-lg relative">
+    <div className="flex flex-col items-center h-[55vh] justify-center bg-brand-dark mx-5 md:mx-40 text-white py-12 px-6 md:px-12 rounded-3xl shadow-lg relative">
       <RetroGrid />
       <div className="absolute top-0 left-0 right-0 bottom-0 w-full h-full bg-gradient-to-t from-transparent via-black/50 to-black/80 pointer-events-none -z-10" />
       <div className="text-center relative z-10 flex flex-col items-center">
@@ -12,10 +12,10 @@ const CTA = () => {
           <span className="size-3 bg-brand-dark rounded-full"></span>
           <span>Join Now</span>
         </div>
-        <h2 className="text-2xl md:text-4xl font-bold mb-4">
+        <h2 className="text-5xl md:text-4xl font-bold mb-4">
           Subscribe to <span className="text-brand-yellow">Our Newsletter</span>
         </h2>
-        <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto mb-6">
+        <p className="text-gray-400 text-base md:text-base max-w-2xl mx-auto mb-6">
           Join our newsletter community for exclusive updates, industry
           insights, special offers, and valuable tips.
         </p>

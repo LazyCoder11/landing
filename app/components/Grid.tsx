@@ -15,7 +15,7 @@ const Grid = () => {
 
   return (
     <section
-      className="relative m-10 rounded-3xl bg-black text-white py-16 overflow-hidden"
+      className="relative m-5 md:m-10 rounded-3xl bg-black text-white py-16 overflow-hidden"
       ref={sectionRef}
     >
       {/* Background Gradient Animation */}

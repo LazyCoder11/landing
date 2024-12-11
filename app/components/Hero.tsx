@@ -6,21 +6,52 @@ import { HeroScrollDemo } from "@/components/Macbook";
 import ShinyButton from "@/components/ui/Rainbow";
 
 const Hero = () => {
-  // Variants for animations
+  // Improved animation variants
   const textVariant = {
-    hidden: { y: "100%", opacity: 0, filter: "blur(20px)" },
-    visible: { y: "0%", opacity: 1, filter: "blur(0px)" },
+    hidden: {
+      y: 100,
+      opacity: 0,
+      filter: "blur(10px)"
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      filter: "blur(0px)",
+      transition: {
+        type: "easeOut",
+        damping: 12,
+        stiffness: 100,
+        duration: 0.5
+      }
+    }
   };
 
   const staggerContainer = {
-    hidden: {},
+    hidden: { opacity: 0 },
     visible: {
+      opacity: 1,
       transition: {
-        staggerChildren: 0.5, // Stagger delay for children
-        duration: 5, // Slower container animation
-        ease: "backIn", // Smooth easing
-      },
+        delayChildren: 0.2, // Reduced initial delay
+        staggerChildren: 0.2 // Faster, more consistent stagger
+      }
+    }
+  };
+
+  const backgroundVariant = {
+    initial: {
+      scale: 0.7,
+      opacity: 0.1
     },
+    animate: {
+      scale: 1,
+      opacity: 0.2,
+      transition: {
+        type: "spring",
+        damping: 10,
+        stiffness: 50,
+        duration: 1.5
+      }
+    }
   };
 
   return (
@@ -29,15 +60,15 @@ const Hero = () => {
       <div className="absolute inset-0 bg-background">
         <motion.div
           className="absolute bottom-1/4 right-1/4 w-[1000px] h-[700px] bg-brand-yellow rounded-full blur-3xl opacity-20"
-          initial={{ scale: 0.7 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.5, ease: "easeIn" }}
+          initial="initial"
+          animate="animate"
+          variants={backgroundVariant}
         ></motion.div>
       </div>
 
       {/* Content */}
       <motion.div
-        className="relative z-10 flex flex-col items-center text-center px-4"
+        className="relative z-10 flex flex-col items-center overflow-hidden text-center px-4"
         initial="hidden"
         animate="visible"
         variants={staggerContainer}
@@ -53,7 +84,7 @@ const Hero = () => {
 
         {/* Headline */}
         <motion.h1
-          className="text-5xl md:text-6xl font-bold capitalize tracking-wide leading-snug overflow-hidden"
+          className="text-5xl md:text-6xl font-bold capitalize tracking-wide leading-snug overflow-hidden mb-3"
           variants={textVariant}
         >
           Faster, better, stronger
@@ -67,7 +98,7 @@ const Hero = () => {
 
         {/* Subheadline */}
         <motion.p
-          className="mt-4 tracking-wide max-w-3xl text-xl text-white "
+          className="mt-4 tracking-wide max-w-3xl text-xl text-white"
           variants={textVariant}
         >
           Stoxi empowers your stock trading journey with real-time data,
@@ -76,12 +107,18 @@ const Hero = () => {
         </motion.p>
 
         {/* Download Buttons */}
-        <motion.div className="mt-8 flex space-x-4" variants={textVariant}>
+        <motion.div
+          className="mt-8 flex space-x-4"
+          variants={textVariant}
+        >
           <ShinyButton>Learn More</ShinyButton>
         </motion.div>
 
         {/* Mobile Mockup */}
-        <motion.div className="relative -z-20">
+        <motion.div
+          className="relative -z-20"
+          variants={textVariant}
+        >
           <HeroScrollDemo />
         </motion.div>
       </motion.div>
