@@ -3,19 +3,95 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --secondary: #0f0f0f;
+  --foreground: #ffffff;
+  --color-1: 0 100% 63%;
+  --color-2: 270 100% 63%;
+  --color-3: 210 100% 63%;
+  --color-4: 195 100% 63%;
+  --color-5: 90 100% 63%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: primaryRegular;
+  src: url("/fonts/Articulat_CF_Regular.otf");
+}
+
+@font-face {
+  font-family: primaryBold;
+  src: url("/fonts/Articulat_CF_Bold.otf");
+}
+
+@font-face {
+  font-family: primarySemiBold;
+  src: url("/fonts/Articulat_CF_Demi_Bold.otf");
+}
+
+@font-face {
+  font-family: primaryNormal;
+  src: url("/fonts/Articulat_CF_Normal.otf");
+}
+
+@font-face {
+  font-family: primaryMedium;
+  src: url("/fonts/Articulat_CF_Medium.otf");
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== TYPOGRAPHY */
+.h1 {
+  @apply text-[34px] leading-[42px] font-bold;
+}
+.h2 {
+  @apply text-[24px] leading-[36px] font-bold;
+}
+.h3 {
+  @apply text-[20px] leading-[28px] font-semibold;
+}
+.h4 {
+  @apply text-[18px] leading-[20px] font-medium;
+}
+.h5 {
+  @apply text-[16px] leading-[24px] font-semibold;
+}
+.subtitle-1 {
+  @apply text-[16px] leading-[24px] font-medium;
+}
+.subtitle-2 {
+  @apply text-[14px] leading-[20px] font-semibold;
+}
+.body-1 {
+  @apply text-[16px] leading-[24px] font-normal;
+}
+.body-2 {
+  @apply text-[14px] leading-[20px] font-normal;
+}
+.button {
+  @apply text-[14px] leading-[20px] font-medium;
+}
+.caption {
+  @apply text-[12px] leading-[16px] font-normal;
+}
+.overline {
+  @apply text-[10px] leading-[14px] font-normal;
+}
+
+
+.animate-gradient-move {
+  background-size: 200% 200%;
+  animation: gradient-move 6s infinite alternate;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
